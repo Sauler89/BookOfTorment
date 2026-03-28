@@ -1483,8 +1483,8 @@ menu
 		scrollbar	'cgscrl1'
 		area		158 224 329 332
 		hidehighlight
-		highlight color "Y"
-		focus color "Y"
+		highlight color "G"
+		focus color "Z"
 
 		action
 		"
@@ -3706,9 +3706,3 @@ COPY_EXISTING ~L_en_US.lua~ ~override/L_pl_PL.lua~
 	INVENTORY = "Ukł. Ekwpipunku:",
 	JOURNAL = "Ekran Dziennika:",~
 	
-	REPLACE_TEXTUALLY ~GEMARIEL_CLASS = "Cleric / Mage",[%TAB%%LNL%%MNL%%WNL%]+GEMARIEL_BIO = "Testowa biografia gemariela \\n\\neng.",+[%TAB%%LNL%%MNL%%WNL%]+FURY_BIO = "furia bio test.",+[%TAB%%LNL%%MNL%%WNL%]+GEMARIEL_WS_TOOLTIP = "Gemariel Claws",+[%TAB%%LNL%%MNL%%WNL%]+GEMARIEL_WS_ITEM_NAME = "Gemariel Claws",+[%TAB%%LNL%%MNL%%WNL%]+GEMARIEL_WS_ITEM_DESC = "GEMARIEL CLAWS \\n(Default Weapon) \\nDamage: 1-8 Piercing or slashing \\nEnchantment: \+1 \\nSpeed: 1 \\nWeight: 0 \\nProficiency: Daggers \\n\\nAbishai claws, razor-sharp, fast and deadly, but most of all effective. They are the Gemariel's primary weapon, spiced with a touch of Set's magic. What more could an Abishai of this kind want from life\?",~ ~GEMARIEL_CLASS = "Kapłan / Mag",
-	GEMARIEL_BIO = "Testowa biografia gemariela \n\npl.",
-	FURY_BIO = "furia bio test pl.",
-	GEMARIEL_WS_TOOLTIP = "Pazury Gemariela",
-	GEMARIEL_WS_ITEM_NAME = "Pazury Gemariela",
-	GEMARIEL_WS_ITEM_DESC = "PAZURY GEMARIELA \n(Standardowa broń) \nObrażenia: 1-8, kłute lub cięte \nUmagicznienie: +1 \nSzybkość: 1 \nWaga: 0 \nBiegłość: Sztylety \n\nPazury abiszaja, ostre jak brzytwa, szybkie i zabójcze, ale przede wszystkim skuteczne. To podstawowa broń Gemariela, zaprawiona nutką magii Seta. Czegóż abiszaj tego pokroju może chcieć więcej od życia?",~
