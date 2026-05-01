@@ -1,18 +1,18 @@
 BACKUP ~BookOfTorment/backup~
 SUPPORT ~FallDamage312 | szef. (https://www.nexusmods.com/planescapetormentenhancededition/mods/9 | https://www.gibberlings3.net/forums/topic/36119-uimodplanescape-ee-book-of-torment-discover-the-dialogues-of-torment-in-a-new-edition/)~
-VERSION ~v1.57~
+VERSION ~v1.60~
 
 README ~BookOfTorment/readme/readme-%LANGUAGE%.txt~
        ~BookOfTorment/readme/readme.txt~
 
 LANGUAGE ~English~
 	~english~
-	~BookOfTorment/lang/en_US/setup.tra~
+	~BookOfTorment/lang/english/setup.tra~
 
 
 LANGUAGE ~Polski (Polish)~
 	~polish~
-	~BookOfTorment/lang/pl_PL/setup.tra~
+	~BookOfTorment/lang/polish/setup.tra~
 
 BEGIN @1
 REQUIRE_PREDICATE (GAME_IS ~pstee~) @10
