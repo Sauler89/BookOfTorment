@@ -1,6 +1,6 @@
 ======================================
 PLANESCAPE: TORMENT - ENHANCED EDITION
-MOD UI: Book of Torment v1.57
+MOD UI: Book of Torment v1.60
 ======================================
 
 Note that the installation alters the UI.menu, BGEE.lua, and L_en_US.lua files.
@@ -58,21 +58,10 @@ Mod was create mainly by copy/paste code, trial and error, although sometimes wi
 Color clicked responses
 -------------------------
 
-I added option to color the clicked responses in Side Dialogue Mode.
+I added option to color the clicked responses.
 
 Since this option increases the weight of the Baldur.lua configuration file with strings, it is uncertain whether and how it will affect the game;
 so it is experimental and optional.
-
-------------------------------------------------------
-To turn this on, you must:
-
-Edit the UI.menu file by searching in it, and deleting from the beginning line a "--"
-
-    -- setDlgResponsesColor(worldPlayerDialogSelection)
-
-    ...and save UI.menu.
-
-If problem occurs, just add this "--" again.
 
 ------------------------------------------------------
 As for slim down conf file: the simplest way is to delete Baldur.lua file, game creates it again, but keep in mind that all set options will back to default.
