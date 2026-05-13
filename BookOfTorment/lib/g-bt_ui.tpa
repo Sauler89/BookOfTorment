@@ -23,7 +23,7 @@ COPY_EXISTING ~UI.menu~ ~override~
 
 	REPLACE_TEXTUALLY ~button[%TAB%%LNL%%MNL%%WNL%]+{+[%TAB%%LNL%%MNL%%WNL%]+area		698 566 138 56+[%TAB%%LNL%%MNL%%WNL%]+bam			NORMBUTT+[%TAB%%LNL%%MNL%%WNL%]+sequence	2+[%TAB%%LNL%%MNL%%WNL%]+text 		"DONE_BUTTON" --Done+[%TAB%%LNL%%MNL%%WNL%]+text style	"button"+[%TAB%%LNL%%MNL%%WNL%]+action+[%TAB%%LNL%%MNL%%WNL%]+"+[%TAB%%LNL%%MNL%%WNL%]+panelID = 6+[%TAB%%LNL%%MNL%%WNL%]+Infinity_ChangeOption( 22, fontSizeSLDR, panelID)+[%TAB%%LNL%%MNL%%WNL%]+for index, var in pairs(graphicsToggles) do+[%TAB%%LNL%%MNL%%WNL%]+if ( var\[6\] == 1 ) then+[%TAB%%LNL%%MNL%%WNL%]+Infinity_ChangeOption( var\[3\], var\[5\], panelID)+[%TAB%%LNL%%MNL%%WNL%]+end+[%TAB%%LNL%%MNL%%WNL%]+end+[%TAB%%LNL%%MNL%%WNL%]+selectedSL = 0+[%TAB%%LNL%%MNL%%WNL%]+Infinity_PopMenu()+[%TAB%%LNL%%MNL%%WNL%]+"+[%TAB%%LNL%%MNL%%WNL%]+}+[%TAB%%LNL%%MNL%%WNL%]+}~
 	
-	~--szef_1 (Graphics menu & skins)
+	~--g-bt_1 (Graphics menu & skins)
 	button 
 	{
 		area		698 566 138 56
@@ -635,7 +635,7 @@ menu
 
 	REPLACE_TEXTUALLY ~`[%TAB%%LNL%%MNL%%WNL%]+menu[%TAB%%LNL%%MNL%%WNL%]+{+[%TAB%%LNL%%MNL%%WNL%]+name 'INVENTORY'~
 	
-	~--szef_02 (Inventory menu)
+	~--g-bt_02 (Inventory menu)
 	
 	function updateSlots()
 	charTable = {}
@@ -743,7 +743,7 @@ menu
 
 	REPLACE_TEXTUALLY ~onOpen "[%TAB%%LNL%%MNL%%WNL%]+e:GetObjectGame():SetCampaign('PST')+[%TAB%%LNL%%MNL%%WNL%]+Infinity_PushMenu('START_MAIN')+[%TAB%%LNL%%MNL%%WNL%]+Infinity_SetBackground('BACKGROUND_START')+[%TAB%%LNL%%MNL%%WNL%]+"~
 	
-	~--szef_03 (Start_menu)
+	~--g-bt_03 (Start_menu)
 	onOpen "
 		e:GetObjectGame():SetCampaign('PST')
 		Infinity_PushMenu('START_MAIN')
@@ -760,7 +760,7 @@ menu
 	
 	REPLACE_TEXTUALLY ~menu[%TAB%%LNL%%MNL%%WNL%]+{+[%TAB%%LNL%%MNL%%WNL%]+name 'WORLD_DIALOG'+[%TAB%%LNL%%MNL%%WNL%]+offset 0 0+[%TAB%%LNL%%MNL%%WNL%]+align center bottom+[%TAB%%LNL%%MNL%%WNL%]+ignoreEsc+[%TAB%%LNL%%MNL%%WNL%]+exclusiveFocus+[%TAB%%LNL%%MNL%%WNL%]+size 1024 297+[%TAB%%LNL%%MNL%%WNL%]+onOpen+[%TAB%%LNL%%MNL%%WNL%]+"+[%TAB%%LNL%%MNL%%WNL%]+Infinity_SetBackground('BACKGROUND_DIALOG')+[%TAB%%LNL%%MNL%%WNL%]+if(dialogViewMode) then+[%TAB%%LNL%%MNL%%WNL%]+--responses from last conversation might not have been cleared yet.+[%TAB%%LNL%%MNL%%WNL%]+clearDialogResponses()+[%TAB%%LNL%%MNL%%WNL%]+end+[%TAB%%LNL%%MNL%%WNL%]+--start the dialog at the current bottom, new responses will scroll in.+[%TAB%%LNL%%MNL%%WNL%]+chatboxJumpToBottom = 1+[%TAB%%LNL%%MNL%%WNL%]+if(isTouchActionbar() and not dialogViewMode) then+[%TAB%%LNL%%MNL%%WNL%]+Infinity_PushMenu('WORLD_DIALOG_LEFT')+[%TAB%%LNL%%MNL%%WNL%]+Infinity_PushMenu('WORLD_DIALOG_RIGHT')+[%TAB%%LNL%%MNL%%WNL%]+end+[%TAB%%LNL%%MNL%%WNL%]+popSidebars()+[%TAB%%LNL%%MNL%%WNL%]+"+[%TAB%%LNL%%MNL%%WNL%]+onClose+[%TAB%%LNL%%MNL%%WNL%]+"+[%TAB%%LNL%%MNL%%WNL%]+Infinity_SetBackground(nil)+[%TAB%%LNL%%MNL%%WNL%]+Infinity_PopMenu('WORLD_DIALOG_LEFT')+[%TAB%%LNL%%MNL%%WNL%]+Infinity_PopMenu('WORLD_DIALOG_RIGHT')+[%TAB%%LNL%%MNL%%WNL%][%TAB%%LNL%%MNL%%WNL%]+pushSidebars()+[%TAB%%LNL%%MNL%%WNL%]+dialogViewMode = nil+[%TAB%%LNL%%MNL%%WNL%]+"+[%TAB%%LNL%%MNL%%WNL%]+list+[%TAB%%LNL%%MNL%%WNL%]+{+[%TAB%%LNL%%MNL%%WNL%]+column+[%TAB%%LNL%%MNL%%WNL%]+{+[%TAB%%LNL%%MNL%%WNL%]+width 100+[%TAB%%LNL%%MNL%%WNL%]+text+[%TAB%%LNL%%MNL%%WNL%]+{+[%TAB%%LNL%%MNL%%WNL%]+area 0 0 -1 -1+[%TAB%%LNL%%MNL%%WNL%]+text lua "getDialogEntryText(rowNumber)"+[%TAB%%LNL%%MNL%%WNL%]+text style "normal"+[%TAB%%LNL%%MNL%%WNL%]+text highlight 1+[%TAB%%LNL%%MNL%%WNL%]+indent 1+[%TAB%%LNL%%MNL%%WNL%]+}+[%TAB%%LNL%%MNL%%WNL%]+}+[%TAB%%LNL%%MNL%%WNL%]+name "worldPlayerDialogChoicesList"+[%TAB%%LNL%%MNL%%WNL%]+area 226 24 580 204+[%TAB%%LNL%%MNL%%WNL%]+rowheight dynamic+[%TAB%%LNL%%MNL%%WNL%]+table "dialogTable"+[%TAB%%LNL%%MNL%%WNL%]+var "worldPlayerDialogSelection"+[%TAB%%LNL%%MNL%%WNL%]+scrollbar	'CGSCRL1'+[%TAB%%LNL%%MNL%%WNL%]+scrollbar func "chatboxScroll"+[%TAB%%LNL%%MNL%%WNL%]+hideHighlight+[%TAB%%LNL%%MNL%%WNL%]+scrollbar force 1+[%TAB%%LNL%%MNL%%WNL%]+ignoreFocus 1+[%TAB%%LNL%%MNL%%WNL%]+actionEnter+[%TAB%%LNL%%MNL%%WNL%]+"+[%TAB%%LNL%%MNL%%WNL%]+if(gameOptions.m_bConfirmDialog == true) then return end+[%TAB%%LNL%%MNL%%WNL%]+if(not dialogTable\[mouseoverRow\] or not getDialogRowClickable(mouseoverRow)) then~
 	
-	~--szef_04 (World dialog menu)
+	~--g-bt_04 (World dialog menu)
 
 	menu 
 {
@@ -878,7 +878,7 @@ menu
 	}
 }
 
---szef_05 (Inventroy menus/background & journal modes)
+--g-bt_05 (Inventroy menus/background & journal modes)
 menu 
 {
 	name 'INVENTORY_CLASSIC'
@@ -997,16 +997,6 @@ menu
 		text style normal
 		text align left center
 	}
-	
-	button
-    {
-        area 507 355 43 43
-        bam "g-bbclaw"
-        text lua "getBBGemarielWeaponSlot()"
-        --text style "normal_parchment"
-		tooltip "GEMARIEL_WS_TOOLTIP"
-        actionAlt "Infinity_PushMenu('ITEM_DESCRIPTION_GEMARIEL_WEAPON_SLOT')"
-    }
 
 	slot {name "slot_inv_1"		area 507 355 43 43	bam "SLOTSWRD"	sequence 0	slotinfo "characters[id].equipment.weapon0"	highlight selected 1		}
 	slot {name "slot_inv_2"		area 557 355 43 43	bam "SLOTSWRD"	sequence 1	slotinfo "characters[id].equipment.weapon1"	highlight selected 1		}
@@ -1068,6 +1058,29 @@ menu
 	slot {name "slot_inv_75"	area 918 299 43 43	bam "IVSLOT"	sequence 1	slotinfo "characters[id].equipment.ground7"			highlight selected 1}
 	slot {name "slot_inv_76"	area 918 350 43 43	bam "IVSLOT"	sequence 2	slotinfo "characters[id].equipment.ground8"			highlight selected 1}
 	slot {name "slot_inv_77"	area 918 400 43 43	bam "IVSLOT"	sequence 3	slotinfo "characters[id].equipment.ground9"			highlight selected 1}
+
+	button
+    {
+    area 507 355 43 43
+    bam "g-bbclaw"
+    enabled "isSpecialChar('Gemariel')"
+    tooltip "GEMARIEL_WS_TOOLTIP"
+    action 
+    "
+    customInventoryError = t('GEMARIEL_WS')
+    Infinity_PlaySound('g-geminv')
+    "
+    actionAlt "itemDesc = { item = {} }; Infinity_PushMenu('ITEM_DESCRIPTION_GEMARIEL_WEAPON_SLOT')"
+    actionExit "customInventoryError = ''"
+    }
+    text
+    {
+        area 446 451 362 32
+        text lua "customInventoryError"
+        scrollbar 'CGSCRL1'
+        text style normal
+        text align left center
+    }
 
 	button
 	{
@@ -1225,15 +1238,6 @@ menu
 		text lua "characters[id].class"
 		text style "label"
 	}
-	button
-    {
-        area 84 281 48 48
-        bam "g-bbclaw"
-        text lua "getBBGemarielWeaponSlot()"
-        --text style "normal_parchment"
-		tooltip "GEMARIEL_WS_TOOLTIP"
-        actionAlt "Infinity_PushMenu('ITEM_DESCRIPTION_GEMARIEL_WEAPON_SLOT')"
-    }
 
 	slot {name "slot_inv_1"		area 84 281 48 48	bam "SLOTSWRD"	sequence 0	slotinfo "characters[id].equipment.weapon0"	highlight selected 1		}
 	slot {name "slot_inv_2"		area 84 348 48 48	bam "SLOTSWRD"	sequence 1	slotinfo "characters[id].equipment.weapon1"	highlight selected 1		}
@@ -1404,6 +1408,28 @@ menu
 	slot {name "slot_inv_76"	area 908 614 40 40	bam "IVSLOT"	sequence 2	slotinfo "characters[id].equipment.ground8"			highlight selected 1}
 	slot {name "slot_inv_77"	area 948 614 40 40	bam "IVSLOT"	sequence 3	slotinfo "characters[id].equipment.ground9"			highlight selected 1}
 
+	button
+    {
+        area 84 282 46 46
+		bam "g-bbclaw"
+		enabled "isSpecialChar('Gemariel')"
+		tooltip "GEMARIEL_WS_TOOLTIP"
+		action 
+		"
+		customInventoryError = t('GEMARIEL_WS')
+		Infinity_PlaySound('g-geminv')
+		"
+		actionAlt "itemDesc = { item = {} }; Infinity_PushMenu('ITEM_DESCRIPTION_GEMARIEL_WEAPON_SLOT')"
+		actionExit "customInventoryError = ''"
+		}
+	text
+		{
+			area 80 634 308 39
+			text lua "customInventoryError"
+			scrollbar 'CGSCRL1'
+			text style normal
+			text align left center
+	}
 	button
 	{
 		area 491 621 22 42
@@ -1928,7 +1954,7 @@ menu
 	}
 	button
 	{
-		area 1042 12 84 32
+		area 1034 18 84 32
 		text "JOURNAL_BUTTON"
 		text style "button"
 		tooltip "JOURNAL_TOOLTIP"
@@ -2154,7 +2180,7 @@ menu
 		end
 	end
 `
---szef_06 (Journal & backgrounds)
+--g-bt_06 (Journal & backgrounds)
 
 menu
 {
@@ -2502,7 +2528,7 @@ menu
 	}
 }
 
---szef_07 (Dialogs backgrounds)
+--g-bt_07 (Dialogs backgrounds)
 
 menu
 {
@@ -3090,7 +3116,7 @@ menu
 		"
 		actiondbl
 		"
-			consume the second click. we want to avoid double clicking accidently stopping the scroll.
+			--consume the second click. we want to avoid double clicking accidently stopping the scroll.
 		"
 	}
 }~
@@ -3108,7 +3134,7 @@ menu
 	color = tonumber(color,16)return bit32.band(color,0x00FFFFFF)
 end
 
---szef_08 (Quest colors)
+--g-bt_08 (Quest colors)
 
 function getQuestColor2(row)
 	local color = 0
@@ -3138,7 +3164,7 @@ REPLACE_TEXTUALLY ~function getBestiaryImage()[%TAB%%LNL%%MNL%%WNL%]+if(bestiary
 	end
 end
 
---szef_09 (Bestiray 2 func)
+--g-bt_09 (Bestiray 2 func)
 
 function getBestiaryImage2()
 	if(bestiary[selectedBestiaryCreature] and bestiary[selectedBestiaryCreature].imageKnown) then
@@ -3155,7 +3181,7 @@ end~
 REPLACE_TEXTUALLY ~`[%TAB%%LNL%%MNL%%WNL%]+menu[%TAB%%LNL%%MNL%%WNL%]+{+[%TAB%%LNL%%MNL%%WNL%]+name "WELCOME_MENU"~ 
 
 ~
---szef_10 (Sliders strings)
+--g-bt_10 (Sliders strings)
 
 function GetdboxString()
 		if SkinsOptionsSliders[1][6] == 0 then
@@ -3289,7 +3315,7 @@ menu
 
 	REPLACE_TEXTUALLY ~function getDialogEntryText(row)[%TAB%%LNL%%MNL%%WNL%]+local text = dialogTable\[row\].text+[%TAB%%LNL%%MNL%%WNL%]+if (row == worldPlayerDialogSelection) then[%TAB%%LNL%%MNL%%WNL%]+--Color the text white when selected[%TAB%%LNL%%MNL%%WNL%]+text = string.gsub(text, "%\^0xff212eff", "\^0xFFFFFFFF")[%TAB%%LNL%%MNL%%WNL%]+end[%TAB%%LNL%%MNL%%WNL%]+return text[%TAB%%LNL%%MNL%%WNL%]+end~
 		
-	~~~~~--szef_11 (Dialogentrytext 2 & 3)
+	~~~~~--g-bt_11 (Dialogentrytext 2 & 3)
 	
 	function getDialogEntryText(row)
 		local text = dialogTable[row].text
@@ -3425,6 +3451,287 @@ menu
 		return text
 	end~~~~~
 	
+	REPLACE_TEXTUALLY ~function getDialogEntryText(row)[ %TAB%%LNL%%MNL%%WNL%]+local text = dialogTable\[row\].text[ %TAB%%LNL%%MNL%%WNL%]+if (row == worldPlayerDialogSelection) then[ %TAB%%LNL%%MNL%%WNL%]+--Color the text white when selected[ %TAB%%LNL%%MNL%%WNL%]+text = string.gsub(text, "%\^0xff212eff", "\^0xFFFFFFFF")[ %TAB%%LNL%%MNL%%WNL%]+end[ %TAB%%LNL%%MNL%%WNL%]+--g-bb_05 (Ambush Arts func)[ %TAB%%LNL%%MNL%%WNL%]+addAmbushArtsToBB()[ %TAB%%LNL%%MNL%%WNL%]+return text[ %TAB%%LNL%%MNL%%WNL%]+end~
+			
+	~~~~~--g-bt_11 (Dialogentrytext 2 & 3)
+	
+	function getDialogEntryText(row)
+		local text = dialogTable[row].text
+		local dlgrc = 0
+		local key, text_key = getDialogHashKey(text)
+		if Infinity_GetINIValue('Graphics','Dlg Responses Color', 0) ~= 0 then
+		if Infinity_GetINIValue('Dlg Color String', key, 0) ~= 0 then
+		dlgrc = 1
+		end
+		end
+		if((dlgrc) == 1) then
+		text = string.gsub(text, "%^0xff212eff", "^0xff4440ff")
+		end
+		if (row == worldPlayerDialogSelection) then
+			--Color the text white when selected
+			text = string.gsub(text, "%^0xff4440ff", "^0xFFFFFFFF")
+		end
+		if (row == worldPlayerDialogSelection) then
+			--Color the text white when selected
+			text = string.gsub(text, "%^0xff212eff", "^0xFFFFFFFF")
+		end
+		--g-bb_05 (Ambush Arts func)
+		addAmbushArtsToBB()
+		return text
+	end
+	
+	function djb2Hash(str)
+	-- 32 bit
+	local h = 5381
+	for i = 1, #str do
+	h = bit32.lshift(h, 5) + h + str:byte(i)
+	end
+	return h
+	end
+
+	function getDialogHashKey(str)
+	i, j = string.find(str, "%- ")
+	if i ~= nil then
+	str = string.sub(str, i+2, #str)
+	end
+	local text_key = tostring(lastNPCdialog) .. '#' .. tostring(str)
+	local key = '%%' .. tostring(djb2Hash(text_key))
+	return key, text_key
+	end
+	
+	function getDialogEntryText2(row)
+	local text = dialogTable[row].text
+	local dlgrc = 0
+	local key, text_key = getDialogHashKey(text)
+	if Infinity_GetINIValue('Graphics','Dlg Responses Color', 0) ~= 0 then
+	if Infinity_GetINIValue('Dlg Color String', key, 0) ~= 0 then
+	dlgrc = 1
+	end
+	end
+	if (not getDialogRowClickable(row)) then
+	--npc names
+	i, j = string.find(text, "^%^0xff75a1b8.-%^")
+	if i ~= nil then
+	lastNPCdialog = string.sub(text, i+11, j-1)
+	end
+	text = string.gsub(text, "%^0xff75a1b8", "^0xFF81c6d9")
+	end
+	if (not getDialogHistory) then
+	--TNO name
+	text = string.gsub(text, "%^0xffd5c885", "^0xFF4e5153")
+	end
+	if (not getDialogHistory) then
+	--TNO txt
+	text = string.gsub(text, "%^0xffd7c8a0", "^0xFF4e5153")
+	end
+	if (not getDialogResponses) then
+	--1. 2.
+	text = string.gsub(text, "%^0xffcec471", "^0xFF81c6d9")
+	end
+	if (not getDialogResponses) then
+	--responses list
+	text = string.gsub(text, "%^0xff212eff", "^0xFF1b20d8")
+	end
+	if (row == worldPlayerDialogSelection) then
+	--Color the text when selected
+	text = string.gsub(text, "%^0xFF1b20d8", "^0xffcecec7")
+	end
+	if((dlgrc) == 1) then
+	text = string.gsub(text, "%^0xFF1b20d8", "^0xff4044ac")
+	end
+	return text
+	end
+	
+	function setDlgResponsesColor(row)
+	Infinity_SetINIValue('Graphics', 'Dlg Responses Color',1)
+	local key, text_key = getDialogHashKey(dialogTable[row].text)
+	print("REC-DIALOG " .. key .. " " .. text_key)
+	Infinity_SetINIValue('Dlg Color String', key, 1)
+	return text
+	end
+	
+	function getDialogEntryText3(row)
+		local text = dialogTable[row].text
+		local dlgrc = 0
+		local key, text_key = getDialogHashKey(text)
+		if Infinity_GetINIValue('Graphics','Dlg Responses Color', 0) ~= 0 then
+		if Infinity_GetINIValue('Dlg Color String', key, 0) ~= 0 then
+		dlgrc = 1
+		end
+		end
+		if (not getDialogRowClickable(row)) then
+			text = string.gsub(text, "%^0xff75a1b8", "^0xFF7d94c2")
+		end
+		if (not getDialogRowClickable(row)) then
+			--for dialogue lines
+			text = string.gsub(text, "%^0xff7da58c", "^0xFFa1a5a6")
+		end
+		if (not getDialogHistory) then
+			text = string.gsub(text, "%^0xffd5c885", "^0xFF4e5153")
+		end
+		if (not getDialogHistory) then
+			text = string.gsub(text, "%^0xffd7c8a0", "^0xFF4e5153")
+		end
+		if (not getDialogResponses) then
+			text = string.gsub(text, "%^0xffcec471", "^0xFF81c6d9")
+		end
+		if (not getDialogResponses) then
+			text = string.gsub(text, "%^0xff212eff", "^0xFF81c6d9")
+		end
+		if (row == worldPlayerDialogSelection) then
+			--Color the text when selected
+			text = string.gsub(text, "%^0xFF81c6d9", "^0xff212eff")
+		end
+		if((dlgrc) == 1) then
+		text = string.gsub(text, "%^0xFF81c6d9", "^0xffa6d7e4")
+		end
+		if (row == worldPlayerDialogSelection) then
+			text = string.gsub(text, "%^0xffa6d7e4", "^0xff212eff")
+		end
+		return text
+	end~~~~~
+	
+	REPLACE_TEXTUALLY ~function getDialogEntryText(row)[ %TAB%%LNL%%MNL%%WNL%]+local text = dialogTable\[row\].text[ %TAB%%LNL%%MNL%%WNL%]+if (row == worldPlayerDialogSelection) then[ %TAB%%LNL%%MNL%%WNL%]+--Color the text white when selected[ %TAB%%LNL%%MNL%%WNL%]+text = string.gsub(text, "%\^0xff212eff", "\^0xFFFFFFFF")[ %TAB%%LNL%%MNL%%WNL%]+end[ %TAB%%LNL%%MNL%%WNL%]+text = string.gsub(text, " ", "\\t")[ %TAB%%LNL%%MNL%%WNL%]+return text[ %TAB%%LNL%%MNL%%WNL%]+end~
+			
+	~~~~~--g-bt_11 (Dialogentrytext 2 & 3) (Chinese support)
+	
+	function getDialogEntryText(row)
+		local text = dialogTable[row].text
+		local dlgrc = 0
+		local key, text_key = getDialogHashKey(text)
+		if Infinity_GetINIValue('Graphics','Dlg Responses Color', 0) ~= 0 then
+		if Infinity_GetINIValue('Dlg Color String', key, 0) ~= 0 then
+		dlgrc = 1
+		end
+		end
+		if((dlgrc) == 1) then
+		text = string.gsub(text, "%^0xff212eff", "^0xff4440ff")
+		end
+		if (row == worldPlayerDialogSelection) then
+			--Color the text white when selected
+			text = string.gsub(text, "%^0xff4440ff", "^0xFFFFFFFF")
+		end
+		if (row == worldPlayerDialogSelection) then
+			--Color the text white when selected
+			text = string.gsub(text, "%^0xff212eff", "^0xFFFFFFFF")
+		end
+		text = string.gsub(text, " ", "\t")
+		--g-bb_05 (Ambush Arts func)
+		addAmbushArtsToBB()
+		return text
+	end
+	
+	function djb2Hash(str)
+	-- 32 bit
+	local h = 5381
+	for i = 1, #str do
+	h = bit32.lshift(h, 5) + h + str:byte(i)
+	end
+	return h
+	end
+
+	function getDialogHashKey(str)
+	i, j = string.find(str, "%- ")
+	if i ~= nil then
+	str = string.sub(str, i+2, #str)
+	end
+	local text_key = tostring(lastNPCdialog) .. '#' .. tostring(str)
+	local key = '%%' .. tostring(djb2Hash(text_key))
+	return key, text_key
+	end
+	
+	function getDialogEntryText2(row)
+	local text = dialogTable[row].text
+	local dlgrc = 0
+	local key, text_key = getDialogHashKey(text)
+	if Infinity_GetINIValue('Graphics','Dlg Responses Color', 0) ~= 0 then
+	if Infinity_GetINIValue('Dlg Color String', key, 0) ~= 0 then
+	dlgrc = 1
+	end
+	end
+	if (not getDialogRowClickable(row)) then
+	--npc names
+	i, j = string.find(text, "^%^0xff75a1b8.-%^")
+	if i ~= nil then
+	lastNPCdialog = string.sub(text, i+11, j-1)
+	end
+	text = string.gsub(text, "%^0xff75a1b8", "^0xFF81c6d9")
+	end
+	if (not getDialogHistory) then
+	--TNO name
+	text = string.gsub(text, "%^0xffd5c885", "^0xFF4e5153")
+	end
+	if (not getDialogHistory) then
+	--TNO txt
+	text = string.gsub(text, "%^0xffd7c8a0", "^0xFF4e5153")
+	end
+	if (not getDialogResponses) then
+	--1. 2.
+	text = string.gsub(text, "%^0xffcec471", "^0xFF81c6d9")
+	end
+	if (not getDialogResponses) then
+	--responses list
+	text = string.gsub(text, "%^0xff212eff", "^0xFF1b20d8")
+	end
+	if (row == worldPlayerDialogSelection) then
+	--Color the text when selected
+	text = string.gsub(text, "%^0xFF1b20d8", "^0xffcecec7")
+	end
+	if((dlgrc) == 1) then
+	text = string.gsub(text, "%^0xFF1b20d8", "^0xff4044ac")
+	end
+	text = string.gsub(text, " ", "\t")
+	return text
+	end
+	
+	function setDlgResponsesColor(row)
+	Infinity_SetINIValue('Graphics', 'Dlg Responses Color',1)
+	local key, text_key = getDialogHashKey(dialogTable[row].text)
+	print("REC-DIALOG " .. key .. " " .. text_key)
+	Infinity_SetINIValue('Dlg Color String', key, 1)
+	return text
+	end
+	
+	function getDialogEntryText3(row)
+		local text = dialogTable[row].text
+		local dlgrc = 0
+		local key, text_key = getDialogHashKey(text)
+		if Infinity_GetINIValue('Graphics','Dlg Responses Color', 0) ~= 0 then
+		if Infinity_GetINIValue('Dlg Color String', key, 0) ~= 0 then
+		dlgrc = 1
+		end
+		end
+		if (not getDialogRowClickable(row)) then
+			text = string.gsub(text, "%^0xff75a1b8", "^0xFF7d94c2")
+		end
+		if (not getDialogRowClickable(row)) then
+			--for dialogue lines
+			text = string.gsub(text, "%^0xff7da58c", "^0xFFa1a5a6")
+		end
+		if (not getDialogHistory) then
+			text = string.gsub(text, "%^0xffd5c885", "^0xFF4e5153")
+		end
+		if (not getDialogHistory) then
+			text = string.gsub(text, "%^0xffd7c8a0", "^0xFF4e5153")
+		end
+		if (not getDialogResponses) then
+			text = string.gsub(text, "%^0xffcec471", "^0xFF81c6d9")
+		end
+		if (not getDialogResponses) then
+			text = string.gsub(text, "%^0xff212eff", "^0xFF81c6d9")
+		end
+		if (row == worldPlayerDialogSelection) then
+			--Color the text when selected
+			text = string.gsub(text, "%^0xFF81c6d9", "^0xff212eff")
+		end
+		if((dlgrc) == 1) then
+		text = string.gsub(text, "%^0xFF81c6d9", "^0xffa6d7e4")
+		end
+		if (row == worldPlayerDialogSelection) then
+			text = string.gsub(text, "%^0xffa6d7e4", "^0xff212eff")
+		end
+		return text
+	end~~~~~
 	
 	REPLACE_TEXTUALLY ~if(newTop \+ contentHeight < height) then[%TAB%%LNL%%MNL%%WNL%]+chatboxScrollToBottom = 0+[%TAB%%LNL%%MNL%%WNL%]+return height - contentHeight+[%TAB%%LNL%%MNL%%WNL%]+end+[%TAB%%LNL%%MNL%%WNL%]+return newTop+[%TAB%%LNL%%MNL%%WNL%]+end~
 	
@@ -3472,7 +3779,7 @@ menu
 
 	REPLACE_TEXTUALLY ~label[%TAB%%LNL%%MNL%%WNL%]+{+[%TAB%%LNL%%MNL%%WNL%]+area 358 37 155 20+[%TAB%%LNL%%MNL%%WNL%]+text lua "gameSaves.files\[rowNumber\].time"~
 	
-	~--szef_12 (Load/Save panels)
+	~--g-bt_12 (Load/Save panels)
 	label
 			{
 				area 600 43 155 20
@@ -3542,7 +3849,7 @@ COPY_EXISTING ~bgee.lua~ ~override~
 	
 	~
 fontcolors['P'] = 'FFa67da7' -- purple highlight
---szef_bot
+--g-bt_bot
 fontcolors['X'] = 'ff4e5153' -- -
 fontcolors['Z'] = 'ff000000' -- black
 
@@ -3735,7 +4042,7 @@ COPY_EXISTING ~L_en_US.lua~ ~override~
 
 	-- G-Book of Torment (UI mod)
 	ORIGINAL_DBOX = "This slider allows to change dialogue box skin.^N\\n\\nO r i g i n a l\\n^-",
-	JPC_DBOX = "This slider allows to change dialogue box skin.^N\\n\\nJ o u r n a l \\tP o r t r a i t \\tC o n v e r s a t i o n s\\n\\t(by Smeagolheart)^-",
+	JPC_DBOX = "This slider allows to change dialogue box skin.^N\\n\\nJ o u r n a l \\tP o r t r a i t \\tC o n v e r s a t i o n s\\n\\t(à la Smeagolheart)^-",
 	SDB_DBOX = "This slider allows to change dialogue box skin.^N\\n\\nS i d e \\tD i a l o g u e \\tB o x\n^-",
 	TTON_DBOX = "This slider allows to change dialogue box skin.^N\\n\\nA \\tl a \\tN u m e n e r a \\tD i a l o g u e \\tB o x\\n^-",
 	DBOX_SKIN = "This slider allows to change dialogue box skin.",
@@ -3763,7 +4070,7 @@ COPY_EXISTING ~L_en_US.lua~ ~override~
 	INVENTORY = "Inventory Layout:",
 	JOURNAL = "Journal Screen:",
 	
-	COLOR_DESC = "It colors and saves the selected answers in dialog boxes.",
+	COLOR_DESC = "It colors and saves the selected answers in dialog boxes (optional & experimental).",
 	
 	COLOR_ON = "Color responses (^0xff008000ON^-)",
     COLOR_OFF = "Color responses (^0xff0000ffOFF^-)",~
@@ -3775,7 +4082,7 @@ REPLACE_TEXTUALLY ~SHOW_CHEATS_BUTTON = "Show",~ ~SHOW_CHEATS_BUTTON = "Show",
 
 	-- G-Book of Torment (UI mod)
 	ORIGINAL_DBOX = "This slider allows to change dialogue box skin.^N\\n\\nO r i g i n a l\\n^-",
-	JPC_DBOX = "This slider allows to change dialogue box skin.^N\\n\\nJ o u r n a l \\tP o r t r a i t \\tC o n v e r s a t i o n s\\n\\t(by Smeagolheart)^-",
+	JPC_DBOX = "This slider allows to change dialogue box skin.^N\\n\\nJ o u r n a l \\tP o r t r a i t \\tC o n v e r s a t i o n s\\n\\t(à la Smeagolheart)^-",
 	SDB_DBOX = "This slider allows to change dialogue box skin.^N\\n\\nS i d e \\tD i a l o g u e \\tB o x\\n^-",
 	TTON_DBOX = "This slider allows to change dialogue box skin.^N\\n\\nA \\tl a \\tN u m e n e r a \\tD i a l o g u e \\tB o x\\n^-",
 	DBOX_SKIN = "This slider allows to change dialogue box skin.",
@@ -3796,12 +4103,12 @@ REPLACE_TEXTUALLY ~SHOW_CHEATS_BUTTON = "Show",~ ~SHOW_CHEATS_BUTTON = "Show",
 	DIALOGUE_BOX = "Dialogue Box:",
 	INVENTORY = "Inventory Layout:",
 	JOURNAL = "Journal Screen:",
-	COLOR_DESC = "It colors and saves the selected answers in dialog boxes.",
+	COLOR_DESC = "It colors and saves the selected answers in dialog boxes (optional & experimental).",
 	COLOR_ON = "Color responses (^0xff008000ON^-)",
 	COLOR_OFF = "Color responses (^0xff0000ffOFF^-),"~
 
 REPLACE_TEXTUALLY ~ORIGINAL_DBOX[ ]*=[ ]*"[^"]*",?~ ~ORIGINAL_DBOX = "Ten suwak pozwala na zmianę okna dialogowego.^N\\n\\nO r i g i n a l e\\n^-",~
-REPLACE_TEXTUALLY ~JPC_DBOX[ ]*=[ ]*"[^"]*",?~ ~JPC_DBOX = "Ten suwak pozwala na zmianę okna dialogowego.^N\\n\\nJ o u r n a l \\tP o r t r a i t \\tC o n v e r s a t i o n s\\n\\t(by Smeagolheart)^-",~
+REPLACE_TEXTUALLY ~JPC_DBOX[ ]*=[ ]*"[^"]*",?~ ~JPC_DBOX = "Ten suwak pozwala na zmianę okna dialogowego.^N\\n\\nJ o u r n a l \\tP o r t r a i t \\tC o n v e r s a t i o n s\\n\\t(à la Smeagolheart)^-",~
 REPLACE_TEXTUALLY ~SDB_DBOX[ ]*=[ ]*"[^"]*",?~ ~SDB_DBOX = "Ten suwak pozwala na zmianę okna dialogowego.^N\\n\\nB o c z n e \\tO k n o \\tD i a l o g o w e\\n^-",~
 REPLACE_TEXTUALLY ~TTON_DBOX[ ]*=[ ]*"[^"]*",?~ ~TTON_DBOX = "Ten suwak pozwala na zmianę okna dialogowego.^N\\n\\nA \\tl a \\tN u m e n e r a\\n^-",~
 REPLACE_TEXTUALLY ~DBOX_SKIN[ ]*=[ ]*"[^"]*",?~ ~DBOX_SKIN = "Ten suwak pozwala na zmianę okna dialogowego.",~
@@ -3822,7 +4129,7 @@ REPLACE_TEXTUALLY ~SLIDER_JOURNAL_1[ ]*=[ ]*"[^"]*",?~ ~SLIDER_JOURNAL_1 = "^0xf
 REPLACE_TEXTUALLY ~DIALOGUE_BOX[ ]*=[ ]*"[^"]*",?~ ~DIALOGUE_BOX = "Okno Dialogowe:",~
 REPLACE_TEXTUALLY ~INVENTORY[ ]*=[ ]*"[^"]*",?~ ~INVENTORY = "Ukł. Ekwpipunku:",~
 REPLACE_TEXTUALLY ~JOURNAL[ ]*=[ ]*"[^"]*",?~ ~JOURNAL = "Ekran Dziennika:",~
-REPLACE_TEXTUALLY ~COLOR_DESC[ ]*=[ ]*"[^"]*",?~ ~COLOR_DESC = "Koloruje i zapamiętuje wybrane odpowiedzi w dialogach.",~
+REPLACE_TEXTUALLY ~COLOR_DESC[ ]*=[ ]*"[^"]*",?~ ~COLOR_DESC = "Koloruje i zapamiętuje wybrane odpowiedzi w dialogach (opcjonalne i eksperymentalne).",~
 REPLACE_TEXTUALLY ~COLOR_ON[ ]*=[ ]*"[^"]*",?~ ~COLOR_ON = "Koloruj odpowiedzi (^0xff008000ON^-)",~
 REPLACE_TEXTUALLY ~COLOR_OFF[ ]*=[ ]*"[^"]*",?~ ~COLOR_OFF = "Koloruj odpowiedzi (^0xff0000ffOFF^-)",~
 
