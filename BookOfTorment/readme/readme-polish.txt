@@ -1,13 +1,10 @@
 ======================================
 PLANESCAPE: TORMENT - ENHANCED EDITION
-MOD UI: Book of Torment v1.60
+MOD UI: Book of Torment v1.65
 ======================================
 
 Instalacja zmienia pliki UI.menu, BGEE.lua, oraz L_pl_PL.lua.
 Od wersji 1.50 te pliki będą patchowane, a więc w teorii zwiększa to kompatybilność BoT z innymi modami.
-Dostosowałem też nieco, ekran load/save, aby pasował do moda na portrety, ale nie udało mi sięwyeliminować 'zielonych rogów' :(.
-
-Feedback nowej wersji mile widziany.
 
 Przed instalacją pobierz:
 https://forums.beamdog.com/discussion/64382/mod-journal-portrait-conversations-for-pstee/p1
@@ -21,7 +18,7 @@ https://github.com/WeiDUorg/weidu/releases
 Po pobraniu zmień nazwę exe na Setup-BookOfTorment.exe
 
 Instalacja (Windows&Wine):
-1. Rozpakuj oba mody i wrzuć do folderu z grą (obok Torment.exe);
+1. Rozpakuj oba mody i wrzuć do folderu z grą (obok chitin.key); Struktura plików powinna wyglądać następująco: folder BookOfTorment (nie BookOfTorment/BookOfTorment) oraz plik exe.
 2. Uruchom Setup-JournalPortraitConversations.exe (wybierz 'N' przy próbie [Modify PSTEE UI.Menu]), następnie 'I' zainstaluj;
 3. Uruchom Setup-BookOfTorment.exe, zainstaluj.
 
@@ -45,7 +42,7 @@ Deinstalacja:
 
 ---------------------------------------------------------------------------------------------------------------------------------
 Podziękowania za pomysł/inspiracje/pomoc dla: 
-kanału discord - grimuar.pl(Grimuar Sferowca); Disco/smeagolheart/Pecca, Bubb, Argent77, lefreut.
+kanału discord - grimuar.pl(Grimuar Sferowca); Disco/smeagolheart/Pecca, Bubb, Argent77(kod do dodawania pvrz), lefreut(pomoc w ustawieniu kolorów w dialogach).
 
 ---------------------------------------------------------------------------------------------------------------------------------
 Opis:

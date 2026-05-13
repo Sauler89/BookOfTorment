@@ -1,13 +1,10 @@
 ======================================
 PLANESCAPE: TORMENT - ENHANCED EDITION
-MOD UI: Book of Torment v1.60
+MOD UI: Book of Torment v1.65
 ======================================
 
 Note that the installation alters the UI.menu, BGEE.lua, and L_en_US.lua files.
 Since v1.50 these files will be patched, so theoriticaly BoT is more flexible and compatible with other mods.
-I also adjusted a bit, the load/save screen to match the portrait mod, but failed to eliminate the ‘green corners’ :(.
-
-Feedback of the new version welcome.
 
 Before installing, download the following mod:
 https://forums.beamdog.com/discussion/64382/mod-journal-portrait-conversations-for-pstee/p1
@@ -20,7 +17,7 @@ https://github.com/WeiDUorg/weidu/releases
 After download, rename .exe to Setup-BookOfTorment.exe
 
 Installation (Windows&Wine):
-    1. Unpack both mods and paste them into the game folder (where Torment.exe is situated);
+    1. Unpack mod and paste it in the game folder (where chitin.key is situated); File structure should looks like this: BookOfTorment folder (not BookOfTorment/BookOfTorment), and .exe file.
     2. Run Setup-JournalPortraitConversations.exe (Select 'N' when asked about [Modify PSTEE UI.Menu]), next: install it 'I';
     3. Run Setup-BookOfTorment.exe, and install it.
 
@@ -45,7 +42,7 @@ Uninstalling:
 
 ----------------------------------------------------------------------------------------------------------------------------------
 Special thanks for all ideas/inspiration/help to: 
-discord channel - grimuar.pl(Grimuar Sferowca); Disco/smeagolheart/Pecca, Bubb, Argent77, lefreut.
+discord channel - grimuar.pl(Grimuar Sferowca); Disco/smeagolheart/Pecca, Bubb, Argent77(code for adding pvrz), lefreut(help with set colors in dialogues).
 
 ----------------------------------------------------------------------------------------------------------------------------------
 Desc:
