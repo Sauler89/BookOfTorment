@@ -72,7 +72,7 @@ Mod was create mainly by copy/paste code, trial and error, although sometimes wi
 
 -------------------------
 ### Color clicked responses
--------------------------
+
 
 I added option to color the clicked responses.
 
