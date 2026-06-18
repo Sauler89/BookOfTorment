@@ -1,4 +1,4 @@
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/szef501/BookOfTorment/total?link=https%3A%2F%2Fgithub.com%2Fszef501%2FBookOfTorment%2Freleases)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/szef501/BookOfTorment/total?link=https//github.com/szef501/BookOfTorment/releases)
 
 
 # PLANESCAPE: TORMENT - ENHANCED EDITION
