@@ -1,7 +1,6 @@
-======================================
 PLANESCAPE: TORMENT - ENHANCED EDITION
 MOD UI: Book of Torment v1.71
-======================================
+
 
 Note that the installation alters the UI.menu, BGEE.lua, and L_en_US.lua files.
 Since v1.50 these files will be patched, so theoriticaly BoT is more flexible and compatible with other mods.
