@@ -24,25 +24,23 @@ After download, rename .exe to Setup-BookOfTorment.exe
 
 Installation (Windows&Wine):
     
-    1. Unpack mod and paste it in the game folder (where chitin.key is situated); 
+ 1. Unpack mod and paste it in the game folder (where chitin.key is situated); 
     File structure should looks like this: BookOfTorment folder (not BookOfTorment/BookOfTorment), and .exe file.
-    
-    2. Run Setup-JournalPortraitConversations.exe 
+
+ 2. Run Setup-JournalPortraitConversations.exe 
     (Select 'N' when asked about [Modify PSTEE UI.Menu]), next: install it 'I';
     
-    3. Run Setup-BookOfTorment.exe, and install it.
-    
-    
+3. Run Setup-BookOfTorment.exe, and install it.
+
+     
 How to set skins after install: Go to the graphics options in the game, look for BoT button ;).
 
 ---------------------------------------------------------------------------------------------------------------------------------
-Important information: 
+### Important information: 
 
 "Book of Torment" should be compatible with other mods.
 
-
 ---
-
 
 The creator of the portraits mod:
 
@@ -53,12 +51,10 @@ The creator of the portraits mod:
 https://forums.beamdog.com/discussion/64382/mod-journal-portrait-conversations-for-pstee
 
 
-
 ----------------------------------------------------------------------------------------------------------------------------------
-Uninstalling:
+### Uninstalling:
 
-1. Run Setup-BookOfTorment.exe, Select 'U' to uninstall it.
-2. 
+1. Run Setup-BookOfTorment.exe, Select 'U' to uninstall it. 
 
 ----------------------------------------------------------------------------------------------------------------------------------
 Special thanks for all ideas/inspiration/help to: 
@@ -67,16 +63,15 @@ discord channel - grimuar.pl(Grimuar Sferowca); Disco/smeagolheart/Pecca, Bubb, 
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
-Desc:
+### Desc:
 Primarily, this modification was created as a test and in response to the question/need: a side dialogue box.
 
 
 Mod was create mainly by copy/paste code, trial and error, although sometimes with the help of the kind souls on the forums.
 
 
-
 -------------------------
-Color clicked responses
+### Color clicked responses
 -------------------------
 
 I added option to color the clicked responses.
