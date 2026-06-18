@@ -1,4 +1,5 @@
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/szef501/BookOfTorment/total.svg?color=gold)](https://github.com/szef501/BookOfTorment/releases)]
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/szef501/BookOfTorment/total?link=https%3A%2F%2Fgithub.com%2Fszef501%2FBookOfTorment%2Freleases)
+
 
 # PLANESCAPE: TORMENT - ENHANCED EDITION
 ## MOD UI: Book of Torment v1.71
