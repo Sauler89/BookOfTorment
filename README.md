@@ -23,9 +23,15 @@ After download, rename .exe to Setup-BookOfTorment.exe
 
 
 Installation (Windows&Wine):
-    1. Unpack mod and paste it in the game folder (where chitin.key is situated); File structure should looks like this: BookOfTorment folder (not BookOfTorment/BookOfTorment), and .exe file.
-    2. Run Setup-JournalPortraitConversations.exe (Select 'N' when asked about [Modify PSTEE UI.Menu]), next: install it 'I';
+    
+    1. Unpack mod and paste it in the game folder (where chitin.key is situated); 
+    File structure should looks like this: BookOfTorment folder (not BookOfTorment/BookOfTorment), and .exe file.
+    
+    2. Run Setup-JournalPortraitConversations.exe 
+    (Select 'N' when asked about [Modify PSTEE UI.Menu]), next: install it 'I';
+    
     3. Run Setup-BookOfTorment.exe, and install it.
+    
     
 How to set skins after install: Go to the graphics options in the game, look for BoT button ;).
 
