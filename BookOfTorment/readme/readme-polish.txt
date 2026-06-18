@@ -1,6 +1,6 @@
 ======================================
 PLANESCAPE: TORMENT - ENHANCED EDITION
-MOD UI: Book of Torment v1.70
+MOD UI: Book of Torment v1.71
 ======================================
 
 Instalacja zmienia pliki UI.menu, BGEE.lua, oraz L_pl_PL.lua.
@@ -42,7 +42,12 @@ Deinstalacja:
 
 ---------------------------------------------------------------------------------------------------------------------------------
 Podziękowania za pomysł/inspiracje/pomoc dla: 
-kanału discord - grimuar.pl(Grimuar Sferowca); Disco/smeagolheart/Pecca, Bubb, Argent77(kod do dodawania pvrz), lefreut(pomoc w ustawieniu kolorów w dialogach).
+kanału discord - grimuar.pl(Grimuar Sferowca)
+Disco/smeagolheart/Pecca 
+Bubb
+Argent77(kod do dodawania pvrz)
+lefreut(pomoc w ustawieniu kolorów w dialogach)
+MephistoSatanDevil(Chinskie tłumaczenie)
 
 ---------------------------------------------------------------------------------------------------------------------------------
 Opis:
