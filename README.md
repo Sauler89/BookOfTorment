@@ -81,7 +81,6 @@ Since this option increases the weight of the Baldur.lua configuration file with
 so it is experimental and optional.
 
 
-------------------------------------------------------
 As for slim down conf file: the simplest way is to delete Baldur.lua file, game creates it again, but keep in mind that all set options will back to default.
 
 
