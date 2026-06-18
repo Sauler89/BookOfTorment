@@ -638,44 +638,50 @@ menu
 	~--g-bt_02 (Inventory menu)
 	
 	function updateSlots()
-	charTable = {}
-	local curCharId = id
-
-	Infinity_OnPortraitLClick(0)
-	local CharId1 = id
-	Infinity_UpdateLuaStats()
-	table.insert(charTable, CharId1)
-	Infinity_OnPortraitLClick(1)
-	local CharId2 = id
-	Infinity_UpdateLuaStats()
-	if Infinity_GetNumCharacters() > 1 then
-	table.insert(charTable, CharId2)
-	end
-	Infinity_OnPortraitLClick(2)
-	local CharId3 = id
-	Infinity_UpdateLuaStats()
-	if Infinity_GetNumCharacters() > 2 then
-	table.insert(charTable, CharId3)
-	end
-	Infinity_OnPortraitLClick(3)
-	local CharId4 = id
-	Infinity_UpdateLuaStats()
-	if Infinity_GetNumCharacters() > 3 then
-	table.insert(charTable, CharId4)
-	end
-	Infinity_OnPortraitLClick(4)
-	local CharId5 = id
-	Infinity_UpdateLuaStats()
-	if Infinity_GetNumCharacters() > 4 then
-	table.insert(charTable, CharId5)
-	end
-	Infinity_OnPortraitLClick(5)
-	local CharId6 = id
-	Infinity_UpdateLuaStats()
-	if Infinity_GetNumCharacters() > 5 then
-	table.insert(charTable, CharId6)
-	end
-
+    charTable = {}
+    local curCharId = id
+    Infinity_OnPortraitLClick(0)
+    local CharId1 = id
+    Infinity_UpdateLuaStats()
+    table.insert(charTable, CharId1)
+    Infinity_OnPortraitLClick(1)
+    local CharId2 = id
+    Infinity_UpdateLuaStats()
+    if Infinity_GetNumCharacters() > 1 then
+        table.insert(charTable, CharId2)
+    end
+    Infinity_OnPortraitLClick(2)
+    local CharId3 = id
+    Infinity_UpdateLuaStats()
+    if Infinity_GetNumCharacters() > 2 then
+        table.insert(charTable, CharId3)
+    end
+    Infinity_OnPortraitLClick(3)
+    local CharId4 = id
+    Infinity_UpdateLuaStats()
+    if Infinity_GetNumCharacters() > 3 then
+        table.insert(charTable, CharId4)
+    end
+    Infinity_OnPortraitLClick(4)
+    local CharId5 = id
+    Infinity_UpdateLuaStats()
+    if Infinity_GetNumCharacters() > 4 then
+        table.insert(charTable, CharId5)
+    end
+    Infinity_OnPortraitLClick(5)
+    local CharId6 = id
+    Infinity_UpdateLuaStats()
+    if Infinity_GetNumCharacters() > 5 then
+        table.insert(charTable, CharId6)
+    end
+    -- Restore the character that was selected before iterating through portraits
+    for i, charId in ipairs(charTable) do
+        if charId == curCharId then
+            Infinity_OnPortraitLClick(i - 1)
+            Infinity_UpdateLuaStats()
+            break
+        end
+    end
 end
 
 rgInvId = 0
