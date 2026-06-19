@@ -1,4 +1,8 @@
 //component names
-@1 = ~Book of Torment~
+@01 = ~Book of Torment~
+@02 = ~This mod requires PSTEE~
 //messages during installation
-@10 = ~This mod requires PSTEE~
+@07 = ~Adding mos+pvrz...~
+@09 = ~Added mos+pvrz!~
+@10 = ~Copying files...~
+@11 = ~Copying complete!~
