@@ -22,7 +22,7 @@ https://web.archive.org/web/20230707040057/https://forums.beamdog.com/uploads/ed
 
 Installation (Windows):
     
-1. Unpack mod and paste it in the game folder (where chitin.key is situated); 
+1. Unpack mods and paste it in the game folder (where chitin.key is situated); 
     File structure should looks like this: BookOfTorment folder (not BookOfTorment/BookOfTorment), and .exe file.
 
 2. Run Setup-JournalPortraitConversations.exe 
