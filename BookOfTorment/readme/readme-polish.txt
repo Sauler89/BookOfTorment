@@ -1,6 +1,6 @@
 ======================================
 PLANESCAPE: TORMENT - ENHANCED EDITION
-MOD UI: Book of Torment v1.71
+MOD UI: Book of Torment
 ======================================
 
 Instalacja zmienia pliki UI.menu, BGEE.lua, oraz L_pl_PL.lua.
