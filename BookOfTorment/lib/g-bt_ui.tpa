@@ -244,29 +244,65 @@ menu
 			selectedSL = 7	
 		"
 	}
-	button	
+	-- Button OFF
+	button
 	{
-    bam 'checkbut'
+    bam 'ivsiad'         
     area 112 662 27 27
-	text "+"
-	text style	"button"
-	text align center center	
-	text useFontZoom 0
-	focus color 255 255 255 255
-	--text color lua "getLabelColor(5)"
-    sequence 0
-    
-	frame "bt_use_custom_color"
-    
+
+    --text "+"
+    text style "button"
+    text align center center
+    text useFontZoom 0
+
+    enabled "bt_use_custom_color == 0"
+
     action
     "
-        if bt_use_custom_color == 1 then
-            bt_use_custom_color = 0
-        else
-            bt_use_custom_color = 1
-        end
+        bt_use_custom_color = 1
     "
 	}
+	-- Button ON
+	button
+	{
+    bam 'ivsimi'    
+    area 112 662 27 27
+
+    --text "+"
+    text style "button"
+    text align center center
+    text useFontZoom 0
+
+   enabled "bt_use_custom_color == 1"
+
+    action
+    "
+        bt_use_custom_color = 0
+    "
+	}
+	--button	
+	--{
+    --bam 'checkbut'
+    --area 112 662 27 27
+	--text "+"
+	--text style	"button"
+	--text align center center	
+	--text useFontZoom 0
+	--focus color 255 255 255 255
+	
+    --sequence 0
+    
+	--frame "bt_use_custom_color"
+    
+    --action
+    --"
+      --  if bt_use_custom_color == 1 then
+        --    bt_use_custom_color = 0
+       -- else
+         --   bt_use_custom_color = 1
+       -- end
+    --"
+	--}
 	text
 	{
 		area		470 596 178 36
@@ -4073,7 +4109,7 @@ COPY_EXISTING ~L_en_US.lua~ ~override~
 	JOURNAL = "Journal Screen:",
 	COLOR_DESC = "It colors and saves the selected answers in dialog boxes (optional & experimental).",
 	COLOR_ON = "Color responses (^0xff008000ON^-)",
-	COLOR_OFF = "Color responses (^0xff0000ffOFF^-),"~
+	COLOR_OFF = "Color responses (^0xff0000ffOFF^-)",~
     UNLESS ~G-Book of Torment~
 BUT_ONLY
 
