@@ -1,0 +1,33 @@
+// Compatibility guard for the New Journal Bestiary helper.
+// g-bt_ui.tpa uses a strict full-function textual match to add
+// getBestiaryImage2(). If another UI mod has changed getBestiaryImage(),
+// that match can fail silently while the New Journal still calls the helper.
+
+COPY_EXISTING ~UI.menu~ ~override~
+    PATCH_IF (INDEX_BUFFER(~bam lua "getBestiaryImage2()"~) < 0) BEGIN
+        PATCH_FAIL ~Book of Torment: New Journal Bestiary control was not installed; cannot verify getBestiaryImage2().~
+    END
+
+    PATCH_IF (INDEX_BUFFER(~function getBestiaryImage2()~) < 0) BEGIN
+        PATCH_IF (INDEX_BUFFER(~function getBestiaryImage()~) < 0) BEGIN
+            PATCH_FAIL ~Book of Torment: getBestiaryImage() was not found in UI.menu; cannot install New Journal Bestiary support safely.~
+        END
+
+        REPLACE_TEXTUALLY EXACT_MATCH
+            ~function getBestiaryImage()~
+            ~--g-bt_09 compatibility fallback
+function getBestiaryImage2()
+    if(bestiary[selectedBestiaryCreature] and bestiary[selectedBestiaryCreature].imageKnown) then
+        return bestiary[selectedBestiaryCreature].imageKnown
+    else
+        return "default" --bmp named "default"
+    end
+end
+
+function getBestiaryImage()~
+    END
+
+    PATCH_IF (INDEX_BUFFER(~function getBestiaryImage2()~) < 0) BEGIN
+        PATCH_FAIL ~Book of Torment: New Journal uses getBestiaryImage2(), but the function could not be installed.~
+    END
+BUT_ONLY

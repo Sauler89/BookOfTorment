@@ -1,3 +1,24 @@
+# Book of Torment — Sauler89 fork
+
+This fork tracks the upstream **Book of Torment v1.72** project by szef501 and adds two isolated changes:
+
+- **Italian localization** for the Book of Torment installer and its 25 mod-specific UI strings.
+- **New Journal Bestiary compatibility guard** that restores `getBestiaryImage2()` when the original strict textual patch does not match an already-modified `UI.menu`.
+
+The Bestiary guard is deliberately fail-fast: if the New Journal control or a safe insertion point cannot be verified, WeiDU aborts instead of leaving a partially working UI. It does not alter `BGEE.lua`, TLK data, CRE files, BAM/MOS/PVRZ assets, or the original `getBestiaryImage()` logic.
+
+The Italian translation and the Bestiary fix are also maintained on separate branches so they can be proposed upstream independently:
+
+- `translation/italian`
+- `fix/bestiary-image-function`
+- `italian-complete` combines both changes.
+
+**Validation status:** the Italian integration, the Bestiary repair, and the combined `italian-complete` build have all been validated successfully in-game on PST:EE. The combined build also passed static and integrity audits.
+
+Upstream project: https://github.com/szef501/BookOfTorment
+
+---
+
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/szef501/BookOfTorment?color=darkred&include_prereleases&label=latest%20release)](https://github.com/szef501/BookOfTorment/releases/latest)
 [![Github downloads (all releases)](https://img.shields.io/github/downloads/szef501/BookOfTorment/total.svg?color=gold)](https://github.com/szef501/BookOfTorment/releases)
 [![Platform](https://img.shields.io/static/v1?label=platform&message=Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Project%20Infinity&color=informational)](https://github.com/szef501/BookOfTorment/releases/latest)
